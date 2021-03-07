@@ -611,16 +611,17 @@ void VideoForm::mouseDoubleClickEvent(QMouseEvent *event)
 
 void VideoForm::wheelEvent(QWheelEvent *event)
 {
-    if (m_videoWidget->geometry().contains(event->position().toPoint())) {
+    if (m_videoWidget->geometry().contains(event->posF().toPoint())) {
         if (!m_device) {
             return;
         }
-        QPointF pos = m_videoWidget->mapFrom(this, event->position().toPoint());
-        QWheelEvent wheelEvent(
-            pos, event->globalPosition(), event->pixelDelta(), event->angleDelta(), event->buttons(), event->modifiers(), event->phase(), event->inverted());
+        QPointF pos = m_videoWidget->mapFrom(this, event->posF().toPoint());
+        QWheelEvent wheelEvent(pos, event->globalPosF(), event->delta(),
+                               event->buttons(), event->modifiers(), event->orientation());
         emit m_device->wheelEvent(&wheelEvent, m_videoWidget->frameSize(), m_videoWidget->size());
     }
 }
+
 
 void VideoForm::keyPressEvent(QKeyEvent *event)
 {
