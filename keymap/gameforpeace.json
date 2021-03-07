@@ -15,7 +15,7 @@
 			},
 			"switchMap": false
 		},
-		"speedRatio": 10
+		"speedRatio": 4
 	},
 	"keyMapNodes": [
 		{
@@ -67,7 +67,7 @@
 			"type": "KMT_CLICK",
 			"key": "Key_Space",
 			"pos": {
-				"x": 0.96,
+				"x": 0.93,
 				"y": 0.7
 			},
 			"switchMap": false
@@ -87,7 +87,7 @@
 			"type": "KMT_CLICK",
 			"key": "Key_Tab",
 			"pos": {
-				"x": 0.06,
+				"x": 0.1,
 				"y": 0.9
 			},
 			"switchMap": true
@@ -107,7 +107,7 @@
 			"type": "KMT_CLICK",
 			"key": "Key_Z",
 			"pos": {
-				"x": 0.95,
+				"x": 0.92,
 				"y": 0.9
 			},
 			"switchMap": false
@@ -117,7 +117,7 @@
 			"type": "KMT_CLICK",
 			"key": "Key_C",
 			"pos": {
-				"x": 0.86,
+				"x": 0.83,
 				"y": 0.92
 			},
 			"switchMap": false
@@ -127,7 +127,7 @@
 			"type": "KMT_CLICK",
 			"key": "Key_R",
 			"pos": {
-				"x": 0.795,
+				"x": 0.76,
 				"y": 0.93
 			},
 			"switchMap": false

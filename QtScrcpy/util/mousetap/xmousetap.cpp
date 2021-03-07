@@ -31,7 +31,7 @@ static void find_grab_window_recursive(xcb_connection_t *dpy, xcb_window_t windo
 
         if (gg->x + offset_x <= rc.left() && gg->x + offset_x + gg->width >= rc.right() &&
                 gg->y + offset_y <= rc.top() && gg->y + offset_y + gg->height >= rc.bottom()) {
-            if (!*grab_window || gg->width * gg->height <= *grab_window_size) {
+            if (!*grab_window || (unsigned int)gg->width * gg->height <= *grab_window_size) {
                 *grab_window = children[i];
                 *grab_window_size = gg->width * gg->height;
             }
